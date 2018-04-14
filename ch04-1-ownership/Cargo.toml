@@ -1,0 +1,6 @@
+[package]
+name = "ch04-1-ownership"
+version = "0.1.0"
+authors = ["ashnikel <ashnikel@gmail.com>"]
+
+[dependencies]

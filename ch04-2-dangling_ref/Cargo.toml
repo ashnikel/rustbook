@@ -1,0 +1,6 @@
+[package]
+name = "ch04-2-dangling_ref"
+version = "0.1.0"
+authors = ["ashNikel <ashnikel@gmail.com>"]
+
+[dependencies]

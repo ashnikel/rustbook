@@ -1,0 +1,6 @@
+[package]
+name = "ch04-3-slices"
+version = "0.1.0"
+authors = ["ashnikel <ashnikel@gmail.com>"]
+
+[dependencies]

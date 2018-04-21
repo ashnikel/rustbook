@@ -6,4 +6,5 @@ members = [
     "ch03-5-branches",
     "ch03-5-loops",
     "ch04-1-ownership",
+    "ch04-2-reference",
 ]

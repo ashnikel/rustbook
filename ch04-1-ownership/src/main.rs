@@ -1,3 +1,4 @@
+#![allow(unused_variables)]
 fn main() {
     let s = String::from("hello");
     takes_ownership(s);

@@ -1,3 +1,4 @@
+#![allow(unused_variables)]
 fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
 

@@ -11,4 +11,5 @@ members = [
     "ch04-3-slices",
     "ch05-2-rectangles",
     "ch06-1-enum",
+    "ch06-2-match",
 ]

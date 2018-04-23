@@ -1,0 +1,6 @@
+[package]
+name = "ch06-2-match"
+version = "0.1.0"
+authors = ["ashnikel <ashnikel@gmail.com>"]
+
+[dependencies]

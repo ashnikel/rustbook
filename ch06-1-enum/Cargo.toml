@@ -1,0 +1,6 @@
+[package]
+name = "ch06-1-enum"
+version = "0.1.0"
+authors = ["ashNikel <ashnikel@gmail.com>"]
+
+[dependencies]

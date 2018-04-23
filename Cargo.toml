@@ -10,4 +10,5 @@ members = [
     "ch04-2-dangling_ref",
     "ch04-3-slices",
     "ch05-2-rectangles",
+    "ch06-1-enum",
 ]

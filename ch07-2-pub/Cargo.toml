@@ -1,5 +1,5 @@
 [package]
-name = "communicator"
+name = "ch07-2-pub"
 version = "0.1.0"
 authors = ["ashNikel <ashnikel@gmail.com>"]
 

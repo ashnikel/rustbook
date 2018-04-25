@@ -1,0 +1,6 @@
+[package]
+name = "ch08-2-string"
+version = "0.1.0"
+authors = ["ashNikel <ashnikel@gmail.com>"]
+
+[dependencies]

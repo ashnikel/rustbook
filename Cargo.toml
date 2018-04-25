@@ -16,4 +16,5 @@ members = [
     "ch07-2-pub",
     "ch07-3-use",
     "ch08-1-vec",
+    "ch08-2-string",
 ]

@@ -1,0 +1,6 @@
+[package]
+name = "ch08-3-exercise2"
+version = "0.1.0"
+authors = ["ashNikel <ashnikel@gmail.com>"]
+
+[dependencies]

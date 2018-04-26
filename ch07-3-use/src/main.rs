@@ -1,3 +1,5 @@
+#![allow(unused_variables)]
+
 pub mod a {
     pub mod series {
         pub mod of {

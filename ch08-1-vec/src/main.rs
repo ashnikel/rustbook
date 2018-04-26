@@ -1,3 +1,6 @@
+#![allow(unused_variables)]
+#![allow(unused_mut)]
+
 fn main() {
     let mut v = Vec::new();
     v.push(5);

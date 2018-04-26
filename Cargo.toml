@@ -18,4 +18,5 @@ members = [
     "ch08-1-vec",
     "ch08-2-string",
     "ch08-3-hash_maps",
+    "ch08-3-exercise1",
 ]

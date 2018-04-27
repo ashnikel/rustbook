@@ -9,7 +9,6 @@ fn main() {
 
     println!("Original text: {}", text);
 
-    // let consonants = String::from("bcdfghjklmnpqrstvwxz");
     let vowels = String::from("aeiouy");
 
     let mut pig_text = String::new();
@@ -27,10 +26,7 @@ fn main() {
             chars.push(letter);
             chars.push('a');
             chars.push('y');
-            pig_word = chars.join();
-            // for c in word.chars() {
-            //     println!("{}", c);
-            // }
+            pig_word = chars.into_iter().collect();
         }
 
         pig_text.push_str(&pig_word);

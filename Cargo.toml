@@ -20,5 +20,6 @@ members = [
     "ch08-3-hash_maps",
     "ch08-3-exercise1",
     "ch08-3-exercise2",
+    "ch09-2-result",
     "ch09-3-guessing_game",
 ]

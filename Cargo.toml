@@ -22,4 +22,6 @@ members = [
     "ch08-3-exercise2",
     "ch09-2-result",
     "ch09-3-guessing_game",
+    "ch10-1-generics",
+    "ch10-2-traits",
 ]

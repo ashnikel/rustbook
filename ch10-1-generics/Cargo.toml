@@ -1,0 +1,6 @@
+[package]
+name = "ch10-1-generics"
+version = "0.1.0"
+authors = ["ashnikel <ashnikel@gmail.com>"]
+
+[dependencies]

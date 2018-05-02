@@ -24,4 +24,5 @@ members = [
     "ch09-3-guessing_game",
     "ch10-1-generics",
     "ch10-2-traits",
+    "ch10-3-lifetime",
 ]

@@ -25,4 +25,5 @@ members = [
     "ch10-1-generics",
     "ch10-2-traits",
     "ch10-3-lifetime",
+    "ch11-1-adder",
 ]

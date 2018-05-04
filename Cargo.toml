@@ -26,4 +26,5 @@ members = [
     "ch10-2-traits",
     "ch10-3-lifetime",
     "ch11-1-adder",
+    "ch11-3-adder",
 ]

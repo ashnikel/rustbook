@@ -36,6 +36,11 @@ impl Guess {
     }
 }
 
+fn print_and_returns_10(a: i32) -> i32 {
+    println!("I got the value {}", a);
+    10
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -62,6 +67,21 @@ mod tests {
     }
 
     #[test]
+    fn add_two_and_two() {
+        assert_eq!(4, add_two(2));
+    }
+
+    #[test]
+    fn add_three_and_two() {
+        assert_eq!(5, add_two(3));
+    }
+
+    #[test]
+    fn one_hundred() {
+        assert_eq!(102, add_two(100));
+    }
+
+    #[test]
     fn greeting_contains_name() {
         let result = greeting("Carol");
         assert!(result.contains("Carol")
@@ -72,5 +92,18 @@ mod tests {
     #[should_panic(expected = "Guess value must be less than or equal to 100")]
     fn greater_than_100() {
         Guess::new(200);
+    }
+
+    #[test]
+    fn this_test_will_pass() {
+        let value = print_and_returns_10(4);
+        assert_eq!(10, value);
+    }
+
+    #[test]
+    #[ignore]
+    fn this_test_will_fail() {
+        let value = print_and_returns_10(8);
+        assert_eq!(5, value);
     }
 }

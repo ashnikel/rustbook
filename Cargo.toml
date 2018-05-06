@@ -27,4 +27,5 @@ members = [
     "ch10-3-lifetime",
     "ch11-1-adder",
     "ch11-3-adder",
+    "ch12-minigrep",
 ]

@@ -2,6 +2,7 @@ use std::error::Error;
 use std::fs::File;
 use std::io::prelude::*;
 
+#[derive (Debug, PartialEq)]
 pub struct Config {
     pub query: String,
     pub filename: String,
@@ -25,6 +26,67 @@ pub fn run(config: Config) -> Result<(), Box<Error>> {
     let mut contents = String::new();
     f.read_to_string(&mut contents)?;
 
-    println!("With text:\n{}", contents);
     Ok(())
+}
+
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    vec![]
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn config_new_ok() {
+        let args = [String::from("minigrep"),
+                    String::from("query"),
+                    String::from("poem.txt"),
+        ];
+        let conf = Config { query: String::from("query"),
+                            filename: String::from("poem.txt")
+        };
+        let result = Config::new(&args).unwrap();
+        assert_eq!(conf, result);
+    }
+
+    #[test]
+    #[should_panic(expected = "not enough arguments")]
+    fn config_new_not_enough_args() {
+        let args = [String::from("minigrep")];
+        Config::new(&args).unwrap();
+    }
+
+    #[test]
+    fn run_ok() {
+        let conf = Config { query: String::from("query"),
+                            filename: String::from("poem.txt")
+        };
+
+        assert_eq!((), run(conf).unwrap());
+    }
+
+    #[test]
+    #[should_panic(expected = "No such file or directory")]
+    fn run_file_not_found() {
+        let conf = Config { query: String::from("query"),
+                            filename: String::from("no-such-file.txt")
+        };
+
+        run(conf).unwrap();
+    }
+
+    #[test]
+    fn one_result() {
+        let query = "duct";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.";
+
+        assert_eq!(
+            vec!["safe, fast, productive."],
+            search(query, contents)
+        );
+    }
 }

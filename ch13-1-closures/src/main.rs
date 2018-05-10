@@ -2,24 +2,28 @@ use std::collections::HashMap;
 use std::thread;
 use std::time::Duration;
 
-struct Cacher<T>
-    where T: Fn(u32) -> u32
+struct Cacher<T, U, V>
+    where T: Fn(U) -> V,
+          U: Eq + Copy + std::hash::Hash,
+          V: Eq + Copy
 {
     calculation: T,
-    values: HashMap<u32, u32>,
+    values: HashMap<U, V>,
 }
 
-impl<T> Cacher<T>
-    where T: Fn(u32) -> u32
+impl<T, U, V> Cacher<T, U, V>
+    where T: Fn(U) -> V,
+          U: Eq + Copy + std::hash::Hash,
+          V: Eq + Copy
 {
-    fn new(calculation: T) -> Cacher<T> {
+    fn new(calculation: T) -> Cacher<T, U, V> {
         Cacher {
             calculation,
             values: HashMap::new(),
         }
     }
 
-    fn value(&mut self, arg: u32) -> u32 {
+    fn value(&mut self, arg: U) -> V {
         // This line hits closure twice. Why?
         // *self.values.entry(arg).or_insert((self.calculation)(arg))
 
@@ -39,17 +43,42 @@ fn generate_workout(intensity: u32, random_number: u32) {
 
     if intensity < 25 {
         println!("Today, do {} pushups!",
-            expensive_result.value(intensity)
+            expensive_result.value(&intensity)
         );
         println!("Next, do {} situps!",
-            expensive_result.value(intensity)
+            expensive_result.value(&intensity)
         );
     } else {
         if random_number == 3 {
             println!("Take a break today! Remember to stay hydrated!");
         } else {
             println!("Today, run for {} minutes!",
-                expensive_result.value(intensity)
+                expensive_result.value(&intensity)
+            );
+        }
+    }
+}
+
+fn generate_workout_str(intensity: &str, random_number: u32) {
+    let mut expensive_result = Cacher::new(|s: &str| {
+        println!("calculating showly... {}", intensity);
+        thread::sleep(Duration::from_secs(2));
+        s.len()
+    });
+
+    if intensity.len() < 10 {
+        println!("Today, do {} pushups!",
+            expensive_result.value(&intensity)
+        );
+        println!("Next, do {} situps!",
+            expensive_result.value(&intensity)
+        );
+    } else {
+        if random_number == 3 {
+            println!("Take a break today! Remember to stay hydrated!");
+        } else {
+            println!("Today, run for {} minutes!",
+                expensive_result.value(&intensity)
             );
         }
     }
@@ -63,6 +92,8 @@ fn main() {
         simulated_user_specified_value,
         simulated_random_number
     );
+
+    generate_workout_str("hard", simulated_random_number);
 }
 
 #[test]

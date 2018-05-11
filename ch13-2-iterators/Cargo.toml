@@ -1,0 +1,6 @@
+[package]
+name = "ch13-2-iterators"
+version = "0.1.0"
+authors = ["ashNikel <ashnikel@gmail.com>"]
+
+[dependencies]

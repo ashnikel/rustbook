@@ -30,4 +30,5 @@ members = [
     "ch12-minigrep",
     "ch13-1-closures",
     "ch13-1-environment",
+    "ch13-2-iterators",
 ]

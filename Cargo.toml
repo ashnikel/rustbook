@@ -31,4 +31,6 @@ members = [
     "ch13-1-closures",
     "ch13-1-environment",
     "ch13-2-iterators",
+    "ch14-2-my_crate",
+    "ch14-2-art",
 ]

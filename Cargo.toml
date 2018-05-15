@@ -33,4 +33,7 @@ members = [
     "ch13-2-iterators",
     "ch14-2-my_crate",
     "ch14-2-art",
+    "ch14-3-adder",
+    "ch14-3-add-one",
+    "ch14-3-add-two",
 ]

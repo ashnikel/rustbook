@@ -1,0 +1,9 @@
+[package]
+name = "ch14-3-adder"
+version = "0.1.0"
+authors = ["ashNikel <ashnikel@gmail.com>"]
+
+[dependencies]
+add-one = { path = "../ch14-3-add-one" }
+add-two = { path = "../ch14-3-add-two" }
+rand = "0.3.14"

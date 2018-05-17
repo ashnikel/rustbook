@@ -38,4 +38,5 @@ members = [
     "ch14-3-add-two",
     "ch15-1-cons",
     "ch15-2-deref",
+    "ch15-3-drop",
 ]

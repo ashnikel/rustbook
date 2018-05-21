@@ -40,4 +40,5 @@ members = [
     "ch15-2-deref",
     "ch15-3-drop",
     "ch15-4-rc",
+    "ch15-5-refcell",
 ]

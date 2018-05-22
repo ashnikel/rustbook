@@ -43,4 +43,5 @@ members = [
     "ch15-5-refcell",
     "ch15-5-rc-refcell",
     "ch15-6-ref-cycle",
+    "ch15-6-weak",
 ]

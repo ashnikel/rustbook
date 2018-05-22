@@ -1,0 +1,6 @@
+[package]
+name = "ch15-5-rc-refcell"
+version = "0.1.0"
+authors = ["ashnikel <ashnikel@gmail.com>"]
+
+[dependencies]

@@ -45,4 +45,5 @@ members = [
     "ch15-6-ref-cycle",
     "ch15-6-weak",
     "ch16-1-threads",
+    "ch16-2-message",
 ]

@@ -46,4 +46,5 @@ members = [
     "ch15-6-weak",
     "ch16-1-threads",
     "ch16-2-message",
+    "ch16-3-mutex",
 ]

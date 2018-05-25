@@ -47,4 +47,5 @@ members = [
     "ch16-1-threads",
     "ch16-2-message",
     "ch16-3-mutex",
+    "ch17-2-trait-objects",
 ]

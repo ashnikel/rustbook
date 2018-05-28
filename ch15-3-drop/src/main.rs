@@ -1,3 +1,4 @@
+#![allow(unused_variables)]
 struct CustomSmartPointer {
     data: String,
 }

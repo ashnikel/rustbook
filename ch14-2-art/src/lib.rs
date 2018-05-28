@@ -1,7 +1,7 @@
 //! # Art
 //!
 //! A library for modeling artistic concepts.
-
+#![allow(unused_variables)]
 pub use kinds::PrimaryColor;
 pub use kinds::SecondaryColor;
 pub use utils::mix;

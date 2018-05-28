@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 extern crate gui;
 use gui::{Draw, Screen, Button};
 

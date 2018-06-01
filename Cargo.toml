@@ -50,4 +50,5 @@ members = [
     "ch17-2-trait-objects",
     "ch17-3-blog",
     "ch17-3-blog2",
+    "ch18-1-if-let",
 ]

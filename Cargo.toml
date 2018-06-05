@@ -51,4 +51,5 @@ members = [
     "ch17-3-blog",
     "ch17-3-blog2",
     "ch18-1-if-let",
+    "ch19-1-unsafe",
 ]

@@ -3,6 +3,17 @@
 
 use std::slice;
 
+static mut COUNTER: u32 = 0;
+
+// Implementing an unsafe trait
+unsafe trait Foo {
+    // methods go here
+}
+
+unsafe impl Foo for i32 {
+    // method implementations go here
+}
+
 fn main() {
     // Dereferencing a raw pointer
     let mut num = 5;
@@ -32,6 +43,18 @@ fn main() {
 
     assert_eq!(a, &mut [1, 2, 3]);
     assert_eq!(b, &mut [4, 5, 6]);
+
+    // Using extern functions to call external code
+    unsafe {
+        println!("Absolute value of -3 according to c: {}", abs(-3));
+    }
+
+    // Accessing or modifying a mutable static variable
+    add_to_count(3);
+
+    unsafe {
+        println!("COUNTER: {}", COUNTER);
+    }
 }
 
 fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]) {
@@ -43,5 +66,20 @@ fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]) {
     unsafe {
         (slice::from_raw_parts_mut(ptr, mid),
          slice::from_raw_parts_mut(ptr.offset(mid as isize), len - mid))
+    }
+}
+
+extern "C" {
+    fn abs(input: i32) -> i32;
+}
+
+#[no_mangle]
+pub extern "C" fn call_from_c() {
+    println!("Just called a Rust function from C!");
+}
+
+fn add_to_count(inc: u32) {
+    unsafe {
+        COUNTER += inc;
     }
 }

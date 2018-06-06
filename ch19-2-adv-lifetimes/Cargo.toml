@@ -1,0 +1,6 @@
+[package]
+name = "ch19-2-adv-lifetimes"
+version = "0.1.0"
+authors = ["ashNikel <ashnikel@gmail.com>"]
+
+[dependencies]

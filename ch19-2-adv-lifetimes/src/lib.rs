@@ -1,13 +1,13 @@
 #![allow(dead_code)]
 
-struct Context<'a>(&'a str);
+struct Context<'s>(&'s str);
 
-struct Parser<'a> {
-    context: &'a Context<'a>,
+struct Parser<'c, 's: 'c> {
+    context: &'c Context<'s>,
 }
 
-impl<'a> Parser<'a> {
-    fn parse(&self) -> Result<(), &str> {
+impl<'c, 's> Parser<'c, 's> {
+    fn parse(&self) -> Result<(), &'s str> {
         Err(&self.context.0[1..])
     }
 }

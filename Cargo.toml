@@ -53,4 +53,5 @@ members = [
     "ch18-1-if-let",
     "ch19-1-unsafe",
     "ch19-2-adv-lifetimes",
+    "ch19-3-adv-traits",
 ]

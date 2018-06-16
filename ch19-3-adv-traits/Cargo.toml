@@ -1,0 +1,6 @@
+[package]
+name = "ch19-3-adv-traits"
+version = "0.1.0"
+authors = ["ashnikel <ashnikel@gmail.com>"]
+
+[dependencies]

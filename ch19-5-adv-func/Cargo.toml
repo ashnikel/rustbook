@@ -1,0 +1,6 @@
+[package]
+name = "ch19-5-adv-func"
+version = "0.1.0"
+authors = ["ashNikel <ashnikel@gmail.com>"]
+
+[dependencies]

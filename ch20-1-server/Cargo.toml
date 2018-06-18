@@ -1,0 +1,6 @@
+[package]
+name = "ch20-1-server"
+version = "0.1.0"
+authors = ["ashnikel <ashnikel@gmail.com>"]
+
+[dependencies]

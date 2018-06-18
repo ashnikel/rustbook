@@ -55,4 +55,5 @@ members = [
     "ch19-2-adv-lifetimes",
     "ch19-3-adv-traits",
     "ch19-5-adv-func",
+    "ch20-1-server",
 ]
